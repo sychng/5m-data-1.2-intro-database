@@ -20,6 +20,7 @@ Each entity has the following attributes:
 
 Answer:
 
+```dbml
 <iframe width="560" height="315" src='https://dbdiagram.io/e/686e6ac3f413ba35080e15c7/686e6f6df413ba35080f19dd'> </iframe>
 
 Table User {
@@ -47,6 +48,10 @@ Table Follows {
 Ref: Post.user_id > User.id // many-to-one
 Ref: Follows.following_user_id > User.id // many-to-one
 Ref: Follows.followed_user_id > User.id // many-to-one
+
+
+```
+
 
 
 ### Question 2
