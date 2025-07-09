@@ -20,9 +20,34 @@ Each entity has the following attributes:
 
 Answer:
 
-```dbml
+<iframe width="560" height="315" src='https://dbdiagram.io/e/686e6ac3f413ba35080e15c7/686e6f6df413ba35080f19dd'> </iframe>
 
-```
+Table User {
+  id int [pk, increment]
+  username varchar
+  email varchar
+  created_at datetime
+}
+
+Table Post {
+  id int [pk, increment]
+  title varchar
+  body varchar
+  user_id varchar
+  status varchar
+  created_at datetime
+}
+
+Table Follows {
+  following_user_id varchar
+  followed_user_id varchar
+  created_at datetime
+}
+
+Ref: Post.user_id > User.id // many-to-one
+Ref: Follows.following_user_id > User.id // many-to-one
+Ref: Follows.followed_user_id > User.id // many-to-one
+
 
 ### Question 2
 
